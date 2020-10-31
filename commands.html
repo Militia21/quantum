@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+<head>
+  <title>Quantum - Commands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="https://media.discordapp.net/attachments/771256650194878464/772036124838330378/Quantum_v2.png?width=432&height=432">
+<script src="index.js"></script>
+</head>
+<style>
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+.bgimg-1 {
+  background-image: url();
+  min-height: 100%;
+}
+.bgimg-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+.container {
+      position: absolute;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {left:50%; top:51%;}
+    50%  {left:50%; top:49%;}
+    100% {left:50%; top:51%;}
+  }
+.shadow {
+  background-color:black;
+}
+.buttonstyle {
+  background-color:#292929;
+  border-color:orangered;
+  border-width:5px;
+  color:white;
+  font-size:15px;
+  padding:10px
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-color:white;
+  border:5px;
+}
+.description {
+  color: #777;
+}
+
+.description em {
+  color: white;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color:#161616;
+}
+
+td, th {
+  border-bottom: 1px solid rgb(168, 168, 168);
+  border-top: 1px solid rgb(168, 168, 168);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #36393E;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2c2f33;
+  top: 0;
+  position:fixed;
+  width: 100%;
+  border-bottom: 2px solid white;
+  z-index:1
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: green;
+}
+</style>
+<script type="text/javascript">
+
+  function reply_click(element)
+  {
+      document.getElementById('product_name').value = element.getAttribute('data-product-name');
+  }    
+
+</script>
+
+        <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/commands" class="active">Commands</a></li>
+              <li><a href="/credits" class="active">Credits</a></li>
+    <li style="float:right"><a href="https://discord.gg/SVS6BgG7qs" target="_blank">Support Server</a></li>
+    <li style="float:right"><a href="https://discord.com/oauth2/authorize?client_id=770529935622012928&permissions=8&scope=bot" target="_blank">Invite</a></li>
+  </ul>
+<body style="background-color:#161616">
+  
+  <br><br><br>
+  <div class="w3-content w3-container w3-padding-64">
+  <p style="font-size:50px;color:white">All bot commands</p><p style="font-size:20px;">Press F3 and type to search</p><br><br><table>
+    <tr>
+    <th style="border-left:1px solid rgb(168, 168, 168);color:">No.</th>
+    <th>Command</th>
+    <th>Aliases</th>
+    <th style="border-right:1px solid rgb(168, 168, 168);">Description</th>
+  </tr>
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">1.</td>
+            <td id="race">play</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Play some music.</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">2.</td>
+            <td id="remind">queue</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a list for songs.</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">3.</td>
+            <td id="subreddit">skip</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Skip a song.</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">4.</td>
+            <td id="blurpify">blurpify</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Blurpify an image</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">5.</td>
+            <td id="hyperlink">hyperlink</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a hyperlink</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">6.</td>
+            <td id="deepfry">deepfry</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Deep fry an image</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">7.</td>
+            <td id="embed">embed</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Create an embed</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">8.</td>
+            <td id="userinfo">userinfo</td>
+            <td>memberinfo</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Check info for a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">9.</td>
+            <td id="dadjoke">dadjoke</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random fact</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">10.</td>
+            <td id="fact">fact</td>
+            <td>randomfact, uselessfact</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random fact</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">11.</td>
+            <td id="serverinfo">serverinfo</td>
+            <td>guildinfo</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get info on a server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">12.</td>
+            <td id="spoiler">spoiler</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">make a message spoiler</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">13.</td>
+            <td id="prefix">prefix</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Set, fetch and reset prefixes</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">14.</td>
+            <td id="poll">poll</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a poll</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">15.</td>
+            <td id="spotify">spotify</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get spotify song information</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">16.</td>
+            <td id="question">question</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Create a multiple choice question</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">17.</td>
+            <td id="mimic">mimic</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Mimic another user!</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">18.</td>
+            <td id="morse">morse</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Convert morse and text (works both ways)</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">19.</td>
+            <td id="emoji">emoji</td>
+            <td>emojify</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Emojify a message</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">20.</td>
+            <td id="translate">translate</td>
+            <td>googletranslate, trans, googletrans</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Translate to another language</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">21.</td>
+            <td id="avatar">avatar</td>
+            <td>pfp, logo, profilepicture, useravatar</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a user's profile picture</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">22.</td>
+            <td id="ascii">ascii</td>
+            <td>asc, asciibinary</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Convert ascii to string and vice versa</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">23.</td>
+            <td id="binary">binary</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Convert decimal to binary</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">24.</td>
+            <td id="warn">warn</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Warn a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">25.</td>
+            <td id="timer">timer</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Create a timer</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">26.</td>
+            <td id="kick">kick</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Kick a member</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">27.</td>
+            <td id="warns">warns</td>
+            <td>viewwarns, viewwarn, mywarns, mywarn</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Check a users warns</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">28.</td>
+            <td id="serverstatistics">serverstatistics</td>
+            <td>serverstats, srvrstats</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get stats for the server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">29.</td>
+            <td id="removewarn">removewarn</td>
+            <td>removewarns, warnremove, delwarn, delwarns, deletewarn, deletewarns</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Remove a warn from a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">30.</td>
+            <td id="corona">corona</td>
+            <td>coronacount</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get coronavirus statistics for a country</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">31.</td>
+            <td id="suggest">suggest</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Suggest something to add to the bot</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">32.</td>
+            <td id="ban">ban</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Ban a member</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">33.</td>
+            <td id="createinvite">createinvite</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Create an invite to the server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">34.</td>
+            <td id="purge">purge</td>
+            <td>nuke, massdelete</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Purge messages</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">35.</td>
+            <td id="role">role</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Add or remove roles from users</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">36.</td>
+            <td id="mute">mute</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Mute a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">37.</td>
+            <td id="unmute">unmute</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Unmute a user if they are already muted</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">38.</td>
+            <td id="nick">nick</td>
+            <td>nickname, setnick, setnickname</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Change the nickname of a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">39.</td>
+            <td id="reloadroles">reloadroles</td>
+            <td>reloadrole, rolereload, reloads, serverreload</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Reload all roles created by the bot.</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">40.</td>
+            <td id="randomnumber">randomnumber</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random number</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">41.</td>
+            <td id="addcommand">addcommand</td>
+            <td>createcommand, cc</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a commands</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">42.</td>
+            <td id="customcommands">customcommands</td>
+            <td>ccs</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get all custom commands for the server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">43.</td>
+            <td id="wikipedia">wikipedia</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Search wikipedia for somehting</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">44.</td>
+            <td id="removecommand">removecommand</td>
+            <td>deletecommand, rc</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Remove a custom command for the server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">45.</td>
+            <td id="calculate">calculate</td>
+            <td>cal, eval, evaluate</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Calculate a math equasion</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">46.</td>
+            <td id="extrawork">extrawork</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Work once every 10 minutes and get big rewards!</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">47.</td>
+            <td id="profile">profile</td>
+            <td>account</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Access profile settings and data</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">48.</td>
+            <td id="work">work</td>
+            <td>getmoney</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get money ever 30 seconds</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">49.</td>
+            <td id="flip">flip</td>
+            <td>coin</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Predict a coin flip correctly and you get credits! Otherwise...</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">50.</td>
+            <td id="roll">roll</td>
+            <td>dice</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Predict a dice roll correctly and you get credits! Otherwise...</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">51.</td>
+            <td id="report">report</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Report</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">52.</td>
+            <td id="shop">shop</td>
+            <td>store</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Buy and sell items</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">53.</td>
+            <td id="balance">balance</td>
+            <td>bal, money, credits</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Check account balance</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">54.</td>
+            <td id="rob">rob</td>
+            <td>steal</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Rob a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">55.</td>
+            <td id="crate">crate</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Buy a crate and get stuff back!</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">56.</td>
+            <td id="lottery">lottery</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Enter the lottery!</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">57.</td>
+            <td id="pay">pay</td>
+            <td>give</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Pay a user</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">58.</td>
+            <td id="leaderboard">leaderboard</td>
+            <td>lb, top</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get the servers leaderboard</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">59.</td>
+            <td id="slots">slots</td>
+            <td>slot</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Play slots</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">60.</td>
+            <td id="setup">setup</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Setup the bot for a server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">61.</td>
+            <td id="randomcommand">randomcommand</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Returns a random command</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">62.</td>
+            <td id="viewsetup">viewsetup</td>
+            <td>checksetup, serversetup</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">View the setup for a server</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">63.</td>
+            <td id="ping">ping</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Returns the bots latency (ms)</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">64.</td>
+            <td id="uptime">uptime</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Gets the bot uptime</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">65.</td>
+            <td id="help">help</td>
+            <td>commands, cmds</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Returns help to all commands available</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">66.</td>
+            <td id="info">info</td>
+            <td>botinfo, about</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Fetches information on the bot</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">67.</td>
+            <td id="randomface">randomface</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random face!</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">68.</td>
+            <td id="changelog">changelog</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Gets the bot changelog for the current version</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">69.</td>
+            <td id="minecraft">minecraft</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a minecraft achievement</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">70.</td>
+            <td id="cat">cat</td>
+            <td>randomcat</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random cat</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">71.</td>
+            <td id="dashboard">dashboard</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a direct link to the dashboard</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">72.</td>
+            <td id="support">support</td>
+            <td>invite, website</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get the website, support server, DBL page and invite link for the bot</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">73.</td>
+            <td id="dog">dog</td>
+            <td>randomdog</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random dog</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">74.</td>
+            <td id="randomreddit">randomreddit</td>
+            <td>meme, image, reddit</td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Get a random reddit meme</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">75.</td>
+            <td id="whiteboard">whiteboard</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Write on a whiteboard</td>
+        </tr>
+
+            
+        <tr>
+            <td style="border-left:1px solid rgb(168, 168, 168);">76.</td>
+            <td id="rip">rip</td>
+            <td></td>
+            <td style="border-right:1px solid rgb(168, 168, 168);">Make a grave for a user</td>
+        </tr>
+
+            </table>
+    
+</body>
